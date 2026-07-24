@@ -1,0 +1,14 @@
+::root {
+    --azul-claro: #5BBAEB;
+    --azul-escuro: #0056FF;
+    --braco: #FFFFFF;
+    --preto: #000000;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+

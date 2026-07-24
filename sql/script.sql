@@ -4,7 +4,8 @@ Create table dados_pessoais (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     cargo VARCHAR(100) NULL,
-    informacao_principal VARCHAR(1000) NULL
+    informacao_principal VARCHAR(1000) NULL,
+    img VARCHAR(1000) NULL
 );
 
 Create table contato (
