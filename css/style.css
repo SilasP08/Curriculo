@@ -137,64 +137,64 @@ body {
     gap: 25px;
 }
 
-.education-item{
+.education-item {
     background: var(--surface-secondary);
     border: 1px solid var(--border);
     border-radius: 15px;
     padding: 20px;
 }
 
-.education-item h3{
+.education-item h3 {
     color: var(--primary);
     margin-bottom: 8px;
 }
 
-.education-item h4{
+.education-item h4 {
     color: var(--title);
     margin-bottom: 12px;
 }
 
-.education-item span{
+.education-item span {
     color: var(--text-light);
 }
 
-.experience-item{
+.experience-item {
     background: var(--surface-secondary);
     border: 1px solid var(--border);
     border-radius: 15px;
     padding: 20px;
 }
 
-.experience-item h3{
+.experience-item h3 {
     color: var(--primary);
     margin-bottom: 8px;
 }
 
-.experience-item h4{
+.experience-item h4 {
     color: var(--title);
     margin-bottom: 10px;
 }
 
-.experience-item span{
+.experience-item span {
     color: var(--text-light);
     display: block;
     margin-bottom: 15px;
 }
 
-.experience-item p{
+.experience-item p {
     color: var(--text);
     line-height: 1.6;
 }
 
 .education-grid,
-.experience-grid{
+.experience-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
 }
 
 .education-item,
-.experience-item{
+.experience-item {
     background: var(--surface-secondary);
     border: 1px solid var(--border);
     border-radius: 15px;
@@ -202,3 +202,19 @@ body {
     transition: .3s;
 }
 
+.edit-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: var(--surface-secondary);
+    color: var(--primary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}

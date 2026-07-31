@@ -25,7 +25,9 @@ require_once "./crud.php";
         </section>
 
         <section class="profile-card">
-
+            <button class="edit-btn">
+                <i class="fa-solid fa-pen"></i>
+            </button>
             <div class="profile-image">
 
                 <img src="img/user.png" alt="Foto">
@@ -51,7 +53,9 @@ require_once "./crud.php";
         </section>
 
         <section class="about card">
-
+            <button class="edit-btn">
+                <i class="fa-solid fa-pen"></i>
+            </button>
             <h2>Sobre Mim</h2>
 
             <p>
@@ -61,7 +65,9 @@ require_once "./crud.php";
         </section>
 
         <section class="information">
-
+            <button class="edit-btn">
+                <i class="fa-solid fa-pen"></i>
+            </button>
             <div class="card">
 
                 <h2>Conheça meus prejetos</h2>
@@ -78,7 +84,9 @@ require_once "./crud.php";
 
         </section>
         <section class="education card">
-
+            <button class="edit-btn">
+                <i class="fa-solid fa-pen"></i>
+            </button>
             <h2>Formação Acadêmica</h2>
 
             <div class="education-grid">
@@ -107,7 +115,9 @@ require_once "./crud.php";
 
         </section>
         <section class="experience card">
-
+            <button class="edit-btn">
+                <i class="fa-solid fa-pen"></i>
+            </button>
             <h2>Experiências Profissionais</h2>
 
             <div class="experience-grid">
