@@ -81,7 +81,7 @@ require_once "./crud.php";
         <section class="education card">
 
             <h2>Formação Acadêmica</h2>
-            <p><?= $formacao['instituicao'] ?></p>
+            <p></p>
         </section>
 
         <section class="experience card">

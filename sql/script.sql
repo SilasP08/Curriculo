@@ -28,15 +28,15 @@ Create table formacao (
 );
 
 INSERT INTO dados_pessoais (
-    nome
+    nome, cargo, informacao_principal
 )VALUES (
-    "Silas Possarle"
+    "Silas Possarle", "Desenvolvedor Senior", 'Minha jornada é pautada pelo aprendizado contínuo e pela busca constante por excelência técnica. Ao longo da minha carreira, liderei e participei ativamente do ciclo completo de desenvolvimento de software — desde a concepção de requisitos e modelagem de bancos de dados até a implementação de microsserviços e integração de APIs RESTful. Tenho grande facilidade para transitar entre equipes multidisciplinares, alinhando necessidades de negócios com decisões técnicas estratégicas.'
 );
 
 INSERT INTO contato (
-    email, telefone
+    email, telefone, perfis
 )VALUES (
-    "silas30@gmail.com", "(11) 99999-1111"
+    "silas30@gmail.com", "(11) 99999-1111", 'https://github.com/SilasP08'
 );
 
 INSERT INTO formacao (instituicao, curso, periodo) VALUES 
