@@ -1,8 +1,21 @@
 ::root {
-    --azul-claro: #5BBAEB;
-    --azul-escuro: #0056FF;
-    --braco: #FFFFFF;
-    --preto: #000000;
+     --primary: #2563EB;
+    --primary-dark: #1D4ED8;
+    --primary-light: #60A5FA;
+
+    --success: #22C55E;
+    --warning: #F59E0B;
+    --danger: #EF4444;
+
+    --background: #F4F6F9;
+    --surface: #FFFFFF;
+    --surface-hover: #F9FAFB;
+
+    --text-title: #111827;
+    --text: #374151;
+    --text-light: #6B7280;
+
+    --border: #E5E7EB;
 }
 * {
     margin: 0;
