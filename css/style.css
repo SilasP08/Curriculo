@@ -18,12 +18,7 @@
 }
 
 body {
-    background:
-        radial-gradient(circle at top left, #60A5FA55, transparent 35%),
-        radial-gradient(circle at top right, #2563EB33, transparent 30%),
-        radial-gradient(circle at bottom left, #93C5FD44, transparent 35%),
-        linear-gradient(135deg, #EEF6FF 0%, #F7FBFF 50%, #EAF4FF 100%);
-
+    background: radial-gradient(circle at top left, #60A5FA55, transparent 35%), radial-gradient(circle at top right, #2563EB33, transparent 30%), radial-gradient(circle at bottom left, #93C5FD44, transparent 35%), linear-gradient(135deg, #EEF6FF 0%, #F7FBFF 50%, #EAF4FF 100%);
     font-family: 'Poppins', sans-serif;
     color: var(--text);
 }
