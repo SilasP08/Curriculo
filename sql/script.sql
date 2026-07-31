@@ -17,14 +17,14 @@ Create table contato (
 Create table experiencias (
     empresa VARCHAR(100) NULL,
     funcao VARCHAR(100) NULL,
-    periodo INT NULL,
+    periodo VARCHAR(100) NULL,
     descricao VARCHAR(1000) NULL
 );
 
 Create table formacao (
     instituicao VARCHAR(100) NULL,
     curso VARCHAR(100) NULL,
-    periodo INT NULL
+    periodo VARCHAR(100) NULL
 );
 
 INSERT INTO dados_pessoais (
@@ -38,3 +38,11 @@ INSERT INTO contato (
 )VALUES (
     "silas30@gmail.com", "(11) 99999-1111"
 );
+
+INSERT INTO formacao (instituicao, curso, periodo) VALUES 
+('Universidade Federal', 'Análise e Desenvolvimento de Sistemas', 2019-2022),
+('Instituto de Tecnologia', 'Pós-Graduação em Arquitetura de Software', 2022-2024);
+
+INSERT INTO experiencias (empresa, funcao, periodo, descricao) VALUES 
+('Comércio de Alimentos Ltda', 'Assistente Administrativo', 2020-2021, 'Gestão de fluxo de caixa, emissão de notas fiscais, controle de estoque e atendimento a fornecedores.'),
+('Global Logística', 'Analista de Operações', 2022-2025, 'Monitoramento de rotas de entrega, gestão de indicadores de desempenho (KPIs) e elaboração de relatórios gerenciais.');

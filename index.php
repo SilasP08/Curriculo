@@ -1,3 +1,7 @@
+<?php
+require_once "./crud.php";
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -9,6 +13,11 @@
 </head>
 
 <body>
+    <?php
+    $dados = read($pdo, 'dados_pessoais');
+    $contato = read($pdo, 'contato');
+    $exp = read($pdo, 'experiencias');
+    ?>
     <main class="profile">
 
         <section class="banner">
@@ -25,17 +34,15 @@
 
             <div class="profile-info">
 
-                <h1>Nome do Usuário</h1>
+                <h1><?= $dados['nome']; ?></h1>
 
-                <span>Desenvolvedor Full Stack</span>
+                <span><?= $dados['cargo'] ?></span>
 
                 <p>Santo André • SP</p>
 
                 <div class="profile-buttons">
 
                     <button>Editar Perfil</button>
-
-                    <button>Compartilhar</button>
 
                 </div>
 
@@ -48,7 +55,7 @@
             <h2>Sobre Mim</h2>
 
             <p>
-                Lorem ipsum dolor sit amet...
+               <?= $dados["informacao_principal"];?>
             </p>
 
         </section>
@@ -57,14 +64,16 @@
 
             <div class="card">
 
-                <h2>Informações</h2>
+                <h2>Conheça meus prejetos</h2>
+                <p><?= $contato["perfis"];?></p>
 
             </div>
 
             <div class="card">
 
                 <h2>Contato</h2>
-
+                <p><?= $contato['email']; ?></p>
+                <p><?= $contato['telefone']; ?></p>
             </div>
 
         </section>
@@ -72,7 +81,7 @@
         <section class="education card">
 
             <h2>Formação Acadêmica</h2>
-
+            <p><?= $formacao['instituicao'] ?></p>
         </section>
 
         <section class="experience card">
