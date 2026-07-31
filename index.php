@@ -88,82 +88,38 @@ require_once "./crud.php";
             $formacoes = readALL($pdo, 'formacao');
             foreach ($formacoes as $formacoe) {
                 echo '
-                    
+                    <div class="education-item">
 
-                        <div class="education-item">
+                        <div class="education-header">
+                            <h3>'.$formacoe['instituicao'].'</h3>
+                            <button class="edit-item">
+                                <i class="fa-solid fa-pen"></i>
+                            </button>
+                            <button class="remove-btn">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </div>
 
-                            <div class="education-header">
-                                <h3>Anhanguera</h3>
-                                <button class="edit-item">
-                                    <i class="fa-solid fa-pen"></i>
-                                </button>
-                                <button class="remove-btn">
-                                    <i class="fa-solid fa-xmark"></i>
-                                </button>
+                        <div class="education-body">
+
+                            <div class="info">
+                                <p>'.$formacoe['curso'].'</p>
                             </div>
 
-                            <div class="education-body">
-
-                                <div class="info">
-                                    <span>Curso</span>
-                                    <p>Engenharia de Software</p>
-                                </div>
-
-                                <div class="info">
-                                    <span>Período</span>
-                                    <p>2024 - 2028</p>
-                                </div>
-
+                            <div class="info">
+                                <span>Período</span>
+                                <p>'.$formacoe['periodo'].'</p>
                             </div>
 
                         </div>
+
+                    </div>
                     
                 ';
             };
 
             ?>
             </div>
-            <div class="education-grid">
-
-                <div class="education-item">
-
-                    <div class="education-header">
-                        <h3>Anhanguera</h3>
-                        <button class="edit-item">
-                            <i class="fa-solid fa-pen"></i>
-                        </button>
-                        <button class="remove-btn">
-                            <i class="fa-solid fa-xmark"></i>
-                        </button>
-                    </div>
-
-                    <div class="education-body">
-
-                        <div class="info">
-                            <span>Curso</span>
-                            <p>Engenharia de Software</p>
-                        </div>
-
-                        <div class="info">
-                            <span>Período</span>
-                            <p>2024 - 2028</p>
-                        </div>
-
-                    </div>
-
-                </div>
-                <div class="education-item">
-
-                    <h3>Senai</h3>
-
-                    <h4>Desenvolvimento de Sistemas</h4>
-
-                    <span>2022 - 2023</span>
-
-                </div>
-
-            </div>
-
         </section>
         <section class="experience card">
             <button class="edit-btn">
@@ -172,11 +128,15 @@ require_once "./crud.php";
             <h2>Experiências Profissionais</h2>
 
             <div class="experience-grid">
+            <?php
+            $expes = readAll($pdo, ' experiencias');
+            foreach ($expes as $ex) {
 
-                <div class="experience-item">
+                print '
+                    <div class="experience-item">
 
                     <div class="experience-header">
-                        <h3>Google</h3>
+                        <h3>'.$ex['empresa'].'</h3>
                         <button class="edit-item">
                             <i class="fa-solid fa-pen"></i>
                         </button>
@@ -189,41 +149,28 @@ require_once "./crud.php";
 
                         <div class="info">
                             <span>Função</span>
-                            <p>Desenvolvedor Full Stack</p>
+                            <p>'.$ex['funcao'].'</p>
                         </div>
 
                         <div class="info">
                             <span>Período</span>
-                            <p>Jan/2023 - Atual</p>
+                            <p>'.$ex['periodo'].'</p>
                         </div>
 
                         <div class="info">
                             <span>Descrição</span>
                             <p>
-                                Desenvolvimento de aplicações web utilizando
-                                Java, Spring Boot e React.
+                                '.$ex['descricao'].'
                             </p>
                         </div>
 
                     </div>
 
                 </div>
-
-                <div class="experience-item">
-
-                    <h3>Microsoft</h3>
-
-                    <h4>Estagiário</h4>
-
-                    <span>2022 - 2023</span>
-
-                    <p>
-                        Desenvolvimento interno de sistemas.
-                    </p>
-
-                </div>
-
-            </div>
+                ';
+    
+            }
+            ?>
 
         </section>
     </main>

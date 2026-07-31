@@ -40,9 +40,9 @@ INSERT INTO contato (
 );
 
 INSERT INTO formacao (instituicao, curso, periodo) VALUES 
-('Universidade Federal', 'Análise e Desenvolvimento de Sistemas', 2019-2022),
-('Instituto de Tecnologia', 'Pós-Graduação em Arquitetura de Software', 2022-2024);
-
+('Universidade Federal', 'Análise e Desenvolvimento de Sistemas', '2019-2022'),
+('Instituto de Tecnologia', 'Pós-Graduação em Arquitetura de Software', '2022-2024');
+ 
 INSERT INTO experiencias (empresa, funcao, periodo, descricao) VALUES 
-('Comércio de Alimentos Ltda', 'Assistente Administrativo', 2020-2021, 'Gestão de fluxo de caixa, emissão de notas fiscais, controle de estoque e atendimento a fornecedores.'),
-('Global Logística', 'Analista de Operações', 2022-2025, 'Monitoramento de rotas de entrega, gestão de indicadores de desempenho (KPIs) e elaboração de relatórios gerenciais.');
+('TechSolutions Inc.', 'Desenvolvedor Junior', '2021-2022', 'Desenvolvimento de aplicações web utilizando React e Node.js. Manutenção de bancos de dados PostgreSQL e integração de APIs REST.'),
+('Inovação Digital', 'Desenvolvedor Pleno', '2023-2025', 'Liderança técnica em projetos internos, implementação de microsserviços e otimização de consultas SQL para melhoria de performance.');
