@@ -84,21 +84,28 @@ require_once "./crud.php";
             <div class="education-grid">
 
                 <div class="education-item">
-                    Formação 1
+
+                    <h3>Anhanguera</h3>
+
+                    <h4>Engenharia de Software</h4>
+
+                    <span>2024 - 2028</span>
+
                 </div>
 
                 <div class="education-item">
-                    Formação 2
-                </div>
 
-                <div class="education-item">
-                    Formação 3
+                    <h3>Senai</h3>
+
+                    <h4>Desenvolvimento de Sistemas</h4>
+
+                    <span>2022 - 2023</span>
+
                 </div>
 
             </div>
 
         </section>
-
         <section class="experience card">
 
             <h2>Experiências Profissionais</h2>
@@ -106,15 +113,32 @@ require_once "./crud.php";
             <div class="experience-grid">
 
                 <div class="experience-item">
-                    Experiência 1
+
+                    <h3>Google</h3>
+
+                    <h4>Desenvolvedor Full Stack</h4>
+
+                    <span>2023 - Atual</span>
+
+                    <p>
+                        Desenvolvimento de aplicações web utilizando
+                        Java, Spring Boot e React.
+                    </p>
+
                 </div>
 
                 <div class="experience-item">
-                    Experiência 2
-                </div>
 
-                <div class="experience-item">
-                    Experiência 3
+                    <h3>Microsoft</h3>
+
+                    <h4>Estagiário</h4>
+
+                    <span>2022 - 2023</span>
+
+                    <p>
+                        Desenvolvimento interno de sistemas.
+                    </p>
+
                 </div>
 
             </div>
