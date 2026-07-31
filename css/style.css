@@ -206,3 +206,19 @@ body {
     line-height: 1.7;
 }
 
+.education-grid,
+.experience-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.education-item,
+.experience-item{
+    background: var(--surface-secondary);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 20px;
+    transition: .3s;
+}
+
