@@ -55,7 +55,7 @@ require_once "./crud.php";
             <h2>Sobre Mim</h2>
 
             <p>
-               <?= $dados["informacao_principal"];?>
+                <?= $dados["informacao_principal"]; ?>
             </p>
 
         </section>
@@ -65,7 +65,7 @@ require_once "./crud.php";
             <div class="card">
 
                 <h2>Conheça meus prejetos</h2>
-                <p><?= $contato["perfis"];?></p>
+                <p><?= $contato["perfis"]; ?></p>
 
             </div>
 
@@ -77,19 +77,49 @@ require_once "./crud.php";
             </div>
 
         </section>
-
         <section class="education card">
 
             <h2>Formação Acadêmica</h2>
-            <p></p>
+
+            <div class="education-grid">
+
+                <div class="education-item">
+                    Formação 1
+                </div>
+
+                <div class="education-item">
+                    Formação 2
+                </div>
+
+                <div class="education-item">
+                    Formação 3
+                </div>
+
+            </div>
+
         </section>
 
         <section class="experience card">
 
             <h2>Experiências Profissionais</h2>
 
-        </section>
+            <div class="experience-grid">
 
+                <div class="experience-item">
+                    Experiência 1
+                </div>
+
+                <div class="experience-item">
+                    Experiência 2
+                </div>
+
+                <div class="experience-item">
+                    Experiência 3
+                </div>
+
+            </div>
+
+        </section>
     </main>
 </body>
 
