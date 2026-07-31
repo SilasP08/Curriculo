@@ -43,6 +43,44 @@
 
         </section>
 
+        <section class="about card">
+
+            <h2>Sobre Mim</h2>
+
+            <p>
+                Lorem ipsum dolor sit amet...
+            </p>
+
+        </section>
+
+        <section class="information">
+
+            <div class="card">
+
+                <h2>Informações</h2>
+
+            </div>
+
+            <div class="card">
+
+                <h2>Contato</h2>
+
+            </div>
+
+        </section>
+
+        <section class="education card">
+
+            <h2>Formação Acadêmica</h2>
+
+        </section>
+
+        <section class="experience card">
+
+            <h2>Experiências Profissionais</h2>
+
+        </section>
+
     </main>
 </body>
 
