@@ -84,41 +84,41 @@ require_once "./crud.php";
                 <i class="fa-solid fa-plus"></i>
             </button>
             <div class="education-grid">
-            <?php
-            $formacoes = readALL($pdo, 'formacao');
-            foreach ($formacoes as $formacoe) {
-                echo '
-                    <div class="education-item">
+                <?php
+                $formacoes = readALL($pdo, 'formacao');
+                foreach ($formacoes as $formacoe) {
+                    echo '
+                        <div class="education-item">
 
-                        <div class="education-header">
-                            <h3>'.$formacoe['instituicao'].'</h3>
-                            <button class="edit-item">
-                                <i class="fa-solid fa-pen"></i>
-                            </button>
-                            <button class="remove-btn">
-                                <i class="fa-solid fa-xmark"></i>
-                            </button>
-                        </div>
-
-                        <div class="education-body">
-
-                            <div class="info">
-                                <p>'.$formacoe['curso'].'</p>
+                            <div class="education-header">
+                                <h3>'.$formacoe['instituicao'].'</h3>
+                                <button class="edit-item">
+                                    <i class="fa-solid fa-pen"></i>
+                                </button>
+                                <button class="remove-btn">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </button>
                             </div>
 
-                            <div class="info">
-                                <span>Período</span>
-                                <p>'.$formacoe['periodo'].'</p>
+                            <div class="education-body">
+
+                                <div class="info">
+                                    <p>'.$formacoe['curso'].'</p>
+                                </div>
+
+                                <div class="info">
+                                    <span>Período</span>
+                                    <p>'.$formacoe['periodo'].'</p>
+                                </div>
+
                             </div>
 
                         </div>
+                        
+                    ';
+                };
 
-                    </div>
-                    
-                ';
-            };
-
-            ?>
+                ?>
             </div>
         </section>
         <section class="experience card">
@@ -171,7 +171,7 @@ require_once "./crud.php";
     
             }
             ?>
-
+            </div>
         </section>
     </main>
 </body>

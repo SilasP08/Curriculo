@@ -271,6 +271,58 @@ main {
     background-color: var(--primary);
 }
 
+.edit-btn,
+.edit-item,
+.add-btn,
+.remove-btn{
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(-5px);
+
+    transition: opacity .3s ease,
+                transform .3s ease,
+                visibility .3s ease;
+
+}
+
+.profile-card:hover .edit-btn,
+.about:hover .edit-btn,
+.card:hover .edit-btn,
+.education-grid:hover .add-btn,
+.experience-grid:hover .add-btn,
+.education-grid:hover .edit-btn{
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+
+}
+.education-item:hover .edit-item,
+.education-item:hover .remove-btn,
+.experience-item:hover .edit-item,
+.experience-item:hover .remove-btn{
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+
+}
+
+.education:hover .add-btn{
+
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+
+}
+
 .education-header {
     display: flex;
     justify-content: space-between;
