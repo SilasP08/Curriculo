@@ -1,21 +1,17 @@
 ::root {
-     --primary: #2563EB;
+    --primary: #2563EB;
     --primary-dark: #1D4ED8;
     --primary-light: #60A5FA;
-
+    --background: #F3F4F6;
+    --surface: #FFFFFF;
+    --surface-secondary: #F9FAFB;
+    --title: #111827;
+    --text: #374151;
+    --text-light: #6B7280;
+    --border: #E5E7EB;
     --success: #22C55E;
     --warning: #F59E0B;
     --danger: #EF4444;
-
-    --background: #F4F6F9;
-    --surface: #FFFFFF;
-    --surface-hover: #F9FAFB;
-
-    --text-title: #111827;
-    --text: #374151;
-    --text-light: #6B7280;
-
-    --border: #E5E7EB;
 }
 
 * {
@@ -24,16 +20,14 @@
     box-sizing: border-box;
 }
 
-body{
-    background:var(--background);
-    font-family:'Poppins',sans-serif;
-    color:var(--text);
+body {
+    background: var(--background);
+    font-family: 'Poppins', sans-serif;
+    color: var(--text);
 }
 
-.profile{
-    width:min(1200px,95%);
-    margin:auto;
-    padding-bottom:50px;
+.profile {
+    width: min(1200px, 95%);
+    margin: auto;
+    padding-bottom: 50px;
 }
-
-
