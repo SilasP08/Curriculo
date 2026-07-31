@@ -84,6 +84,46 @@ require_once "./crud.php";
                 <i class="fa-solid fa-plus"></i>
             </button>
             <div class="education-grid">
+            <?php
+            $formacoes = readALL($pdo, 'formacao');
+            foreach ($formacoes as $formacoe) {
+                echo '
+                    
+
+                        <div class="education-item">
+
+                            <div class="education-header">
+                                <h3>Anhanguera</h3>
+                                <button class="edit-item">
+                                    <i class="fa-solid fa-pen"></i>
+                                </button>
+                                <button class="remove-btn">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </button>
+                            </div>
+
+                            <div class="education-body">
+
+                                <div class="info">
+                                    <span>Curso</span>
+                                    <p>Engenharia de Software</p>
+                                </div>
+
+                                <div class="info">
+                                    <span>Período</span>
+                                    <p>2024 - 2028</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    
+                ';
+            };
+
+            ?>
+            </div>
+            <div class="education-grid">
 
                 <div class="education-item">
 
