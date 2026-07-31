@@ -10,6 +10,7 @@ require_once "./crud.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curriculo</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
@@ -20,33 +21,23 @@ require_once "./crud.php";
     ?>
     <main class="profile">
 
-        <section class="banner">
-
-        </section>
-
         <section class="profile-card">
+
             <button class="edit-btn">
                 <i class="fa-solid fa-pen"></i>
             </button>
+
             <div class="profile-image">
-
                 <img src="img/user.png" alt="Foto">
-
             </div>
 
             <div class="profile-info">
 
                 <h1><?= $dados['nome']; ?></h1>
 
-                <span><?= $dados['cargo'] ?></span>
+                <span><?= $dados['cargo']; ?></span>
 
                 <p>Santo André • SP</p>
-
-                <div class="profile-buttons">
-
-                    <button>Editar Perfil</button>
-
-                </div>
 
             </div>
 
@@ -65,18 +56,20 @@ require_once "./crud.php";
         </section>
 
         <section class="information">
-            <button class="edit-btn">
-                <i class="fa-solid fa-pen"></i>
-            </button>
-            <div class="card">
 
+            <div class="card">
+                <button class="edit-btn">
+                    <i class="fa-solid fa-pen"></i>
+                </button>
                 <h2>Conheça meus prejetos</h2>
                 <p><?= $contato["perfis"]; ?></p>
 
             </div>
 
             <div class="card">
-
+                <button class="edit-btn">
+                    <i class="fa-solid fa-pen"></i>
+                </button>
                 <h2>Contato</h2>
                 <p><?= $contato['email']; ?></p>
                 <p><?= $contato['telefone']; ?></p>
@@ -84,23 +77,33 @@ require_once "./crud.php";
 
         </section>
         <section class="education card">
-            <button class="edit-btn">
-                <i class="fa-solid fa-pen"></i>
-            </button>
             <h2>Formação Acadêmica</h2>
 
             <div class="education-grid">
-
                 <div class="education-item">
 
-                    <h3>Anhanguera</h3>
+                    <div class="education-header">
+                        <h3>Anhanguera</h3>
+                        <button class="edit-item">
+                            <i class="fa-solid fa-pen"></i>
+                        </button>
+                    </div>
 
-                    <h4>Engenharia de Software</h4>
+                    <div class="education-body">
 
-                    <span>2024 - 2028</span>
+                        <div class="info">
+                            <span>Curso</span>
+                            <p>Engenharia de Software</p>
+                        </div>
+
+                        <div class="info">
+                            <span>Período</span>
+                            <p>2024 - 2028</p>
+                        </div>
+
+                    </div>
 
                 </div>
-
                 <div class="education-item">
 
                     <h3>Senai</h3>
