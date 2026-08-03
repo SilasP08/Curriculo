@@ -1,3 +1,32 @@
+<?php
+require_once 'crud.php';
+
+$experiencia = $_POST['xp'] ?? '';
+if ($experiencia === 'xp') {
+    $add = [
+        'empresa'=> $_POST['empresa'],
+        'funcao'=> $_POST['cargo'],
+        'periodo'=> $_POST['periodo'],
+        'descricao'=> $_POST['desc']
+    ];
+
+    create($pdo, 'experiencias', $add);
+    header('Location: index.php');
+}
+
+$formacao = $_POST['f'] ??'';
+if ($formacao === 'for') {
+    $add = [
+        'instituicao'=> $_POST['instituicao'],
+        'curso'=> $_POST['curso'],
+        'periodo'=> $_POST['periodo']
+    ];
+
+    create($pdo, 'formacao', $add);
+    header('Location: index.php');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -24,7 +53,8 @@
                             <p>Preencha as informações abaixo.</p>
                         </div>
 
-                        <form action="" method="POST">
+                        <form action="./adicionar.php" method="POST">
+                            <input type="hidden" name="xp" value="xp">
                             <div class="input-group">
                                 <label>Empresa</label>
                                 <input type="text" name="empresa" placeholder="Google">
@@ -41,7 +71,7 @@
                             </div>
                             <div class="input-group">
                                 <label>Descricao</label>
-                                <textarea></textarea>
+                                <textarea name="desc"></textarea>
                             </div>
 
                             <div class="buttons">
@@ -63,7 +93,8 @@
                             <p>Preencha as informações abaixo.</p>
                         </div>
 
-                        <form action="#" method="POST">
+                        <form action="./adicionar.php" method="POST">
+                            <input type="hidden" name="f" value="for">
                             <div class="input-group">
                                 <label>Instituição</label>
                                 <input type="text" name="instituicao">
@@ -80,9 +111,9 @@
                             </div>
 
                             <div class="buttons">
-                                <button class="cancel" type="button">
+                                <a href="./index.php" class="cancel" type="button">
                                     Cancelar
-                                </button>
+                                </a>
                                 <button class="save" type="submit">
                                     Salvar
                                 </button>

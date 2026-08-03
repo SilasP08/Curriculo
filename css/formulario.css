@@ -103,3 +103,8 @@ textarea {
 .save:hover {
     background: var(--primary-dark);
 }
+
+a {
+    color: red;
+    text-decoration: none;
+}
