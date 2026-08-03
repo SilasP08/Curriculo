@@ -80,7 +80,7 @@ require_once "./crud.php";
         <section class="education card">
             <h2>Formação Acadêmica</h2>
             <form action="./adicionar.php" method="GET">
-                <input type="hidden" name="formacao">
+                <input type="hidden" name="formacao" value="forma">
                 <button type="submit" class="add-btn">
                     <i class="fa-solid fa-plus"></i>
                 </button>
@@ -131,7 +131,7 @@ require_once "./crud.php";
         </section>
         <section class="experience card">
             <form action="./adicionar.php" method="GET">
-                <input type="hidden" name="expe">
+                <input type="hidden" name="expe" value="ex">
                 <button class="edit-btn">
                     <i class="fa-solid fa-plus"></i>
                 </button>
