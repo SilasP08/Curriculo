@@ -39,7 +39,7 @@ INSERT INTO dados_pessoais (
 INSERT INTO contato (
     email, telefone, perfis
 )VALUES (
-    "silas30@gmail.com", "(11) 99999-1111", 'https://github.com/SilasP08'
+    "silas30@gmail.com", "(11) 93056-9806", 'https://github.com/SilasP08'
 );
 
 INSERT INTO formacao (instituicao, curso, periodo) VALUES 

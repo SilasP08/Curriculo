@@ -79,11 +79,15 @@ require_once "./crud.php";
         </section>
         <section class="education card">
             <h2>Formação Acadêmica</h2>
-            <button class="add-btn">
-                <i class="fa-solid fa-plus"></i>
-            </button>
+            <form action="./adicionar.php" method="GET">
+                <input type="hidden" name="formacao">
+                <button type="submit" class="add-btn">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </form>
+
             <div class="education-grid">
-              
+
                 <?php
                 $formacoes = readALL($pdo, 'formacao');
                 foreach ($formacoes as $formacoe) {
@@ -91,12 +95,12 @@ require_once "./crud.php";
                         <div class="education-item">
 
                             <div class="education-header">
-                                <h3>'.$formacoe['instituicao'].'</h3>
+                                <h3>' . $formacoe['instituicao'] . '</h3>
                                 <button class="edit-item">
                                     <i class="fa-solid fa-pen"></i>
                                 </button>
                                 <form action="./apagar.php" method="GET">
-                                    <input type="hidden" name="id_formacao" value="'.$formacoe['id_formacao'].'">
+                                    <input type="hidden" name="id_formacao" value="' . $formacoe['id_formacao'] . '">
                                     <button type="submit" class="remove-btn">
                                         <i class="fa-solid fa-xmark"></i>
                                     </button>
@@ -106,12 +110,12 @@ require_once "./crud.php";
                             <div class="education-body">
 
                                 <div class="info">
-                                    <p>'.$formacoe['curso'].'</p>
+                                    <p>' . $formacoe['curso'] . '</p>
                                 </div>
 
                                 <div class="info">
                                     <span>Período</span>
-                                    <p>'.$formacoe['periodo'].'</p>
+                                    <p>' . $formacoe['periodo'] . '</p>
                                 </div>
 
                             </div>
@@ -119,32 +123,36 @@ require_once "./crud.php";
                         </div>
                         
                     ';
-                };
+                }
+                ;
 
                 ?>
             </div>
         </section>
         <section class="experience card">
-            <button class="edit-btn">
-                <i class="fa-solid fa-plus"></i>
-            </button>
+            <form action="./adicionar.php" method="GET">
+                <input type="hidden" name="expe">
+                <button class="edit-btn">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </form>
             <h2>Experiências Profissionais</h2>
 
             <div class="experience-grid">
-            <?php
-            $expes = readAll($pdo, ' experiencias');
-            foreach ($expes as $ex) {
+                <?php
+                $expes = readAll($pdo, ' experiencias');
+                foreach ($expes as $ex) {
 
-                print '
+                    print '
                     <div class="experience-item">
 
                     <div class="experience-header">
-                        <h3>'.$ex['empresa'].'</h3>
+                        <h3>' . $ex['empresa'] . '</h3>
                         <button class="edit-item">
                             <i class="fa-solid fa-pen"></i>
                         </button>
                         <form action="./apagar.php" method="GET">
-                            <input type="hidden" name="id_exp" value="'.$ex['id_exp'].'">
+                            <input type="hidden" name="id_exp" value="' . $ex['id_exp'] . '">
                             <button type="submit" class="remove-btn">
                                 <i class="fa-solid fa-xmark"></i>
                             </button>
@@ -155,18 +163,18 @@ require_once "./crud.php";
 
                         <div class="info">
                             <span>Função</span>
-                            <p>'.$ex['funcao'].'</p>
+                            <p>' . $ex['funcao'] . '</p>
                         </div>
 
                         <div class="info">
                             <span>Período</span>
-                            <p>'.$ex['periodo'].'</p>
+                            <p>' . $ex['periodo'] . '</p>
                         </div>
 
                         <div class="info">
                             <span>Descrição</span>
                             <p>
-                                '.$ex['descricao'].'
+                                ' . $ex['descricao'] . '
                             </p>
                         </div>
 
@@ -174,9 +182,9 @@ require_once "./crud.php";
 
                 </div>
                 ';
-    
-            }
-            ?>
+
+                }
+                ?>
             </div>
         </section>
     </main>
