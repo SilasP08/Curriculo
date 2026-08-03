@@ -1,6 +1,5 @@
 <?php
 require_once "./crud.php";
-
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -84,6 +83,7 @@ require_once "./crud.php";
                 <i class="fa-solid fa-plus"></i>
             </button>
             <div class="education-grid">
+              
                 <?php
                 $formacoes = readALL($pdo, 'formacao');
                 foreach ($formacoes as $formacoe) {
@@ -95,9 +95,12 @@ require_once "./crud.php";
                                 <button class="edit-item">
                                     <i class="fa-solid fa-pen"></i>
                                 </button>
-                                <button class="remove-btn">
-                                    <i class="fa-solid fa-xmark"></i>
-                                </button>
+                                <form action="./apagar.php" method="POST">
+                                    <input type="hidden" name="id_formacao" value="'.$formacoe['id_formacao'].'">
+                                    <button type="submit" class="remove-btn">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </button>
+                                </form>
                             </div>
 
                             <div class="education-body">
