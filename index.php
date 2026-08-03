@@ -95,7 +95,7 @@ require_once "./crud.php";
                                 <button class="edit-item">
                                     <i class="fa-solid fa-pen"></i>
                                 </button>
-                                <form action="./apagar.php" method="POST">
+                                <form action="./apagar.php" method="GET">
                                     <input type="hidden" name="id_formacao" value="'.$formacoe['id_formacao'].'">
                                     <button type="submit" class="remove-btn">
                                         <i class="fa-solid fa-xmark"></i>
@@ -143,9 +143,12 @@ require_once "./crud.php";
                         <button class="edit-item">
                             <i class="fa-solid fa-pen"></i>
                         </button>
-                        <button class="remove-btn">
-                            <i class="fa-solid fa-xmark"></i>
-                        </button>
+                        <form action="./apagar.php" method="GET">
+                            <input type="hidden" name="id_exp" value="'.$ex['id_exp'].'">
+                            <button type="submit" class="remove-btn">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </form>
                     </div>
 
                     <div class="experience-body">

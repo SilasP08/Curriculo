@@ -11,7 +11,7 @@ Create table dados_pessoais (
 Create table contato (
     id_contato INT AUTO_INCREMENT PRIMARY KEY,
     email VARCHAR(100) NOT NULL,
-    telefone VARCHAR(14) NOT NULL,
+    telefone VARCHAR(15) NOT NULL,
     perfis VARCHAR(1000) NULL
 );
 
