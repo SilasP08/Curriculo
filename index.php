@@ -21,12 +21,16 @@ require_once "./crud.php";
     $exp = read($pdo, 'experiencias');
     ?>
     <main class="profile">
+        <form action="./update.php" method="POST">
 
+        </form>
         <section class="profile-card">
 
-            <button class="edit-btn">
-                <i class="fa-solid fa-pen"></i>
-            </button>
+            <form action="./update.php" method="POST">
+                <button class="edit-btn">
+                    <i class="fa-solid fa-pen"></i>
+                </button>
+            </form>
 
             <div class="profile-image">
                 <img src="img/user.png" alt="Foto">
@@ -45,9 +49,11 @@ require_once "./crud.php";
         </section>
 
         <section class="about card">
-            <button class="edit-btn">
-                <i class="fa-solid fa-pen"></i>
-            </button>
+            <form action="./update.php" method="POST">
+                <button class="edit-btn">
+                    <i class="fa-solid fa-pen"></i>
+                </button>
+            </form>
             <h2>Sobre Mim</h2>
 
             <p>
@@ -96,9 +102,11 @@ require_once "./crud.php";
 
                             <div class="education-header">
                                 <h3>' . $formacoe['instituicao'] . '</h3>
-                                <button class="edit-item">
-                                    <i class="fa-solid fa-pen"></i>
-                                </button>
+                                <form action="./update.php" method="POST">
+                                    <button class="edit-item">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </button>
+                                </form>
                                 <form action="./apagar.php" method="GET">
                                     <input type="hidden" name="id_formacao" value="' . $formacoe['id_formacao'] . '">
                                     <button type="submit" class="remove-btn">
@@ -148,9 +156,11 @@ require_once "./crud.php";
 
                     <div class="experience-header">
                         <h3>' . $ex['empresa'] . '</h3>
-                        <button class="edit-item">
-                            <i class="fa-solid fa-pen"></i>
-                        </button>
+                        <form action="./update.php" method="POST">
+                            <button class="edit-item">
+                                <i class="fa-solid fa-pen"></i>
+                            </button>
+                        </form>
                         <form action="./apagar.php" method="GET">
                             <input type="hidden" name="id_exp" value="' . $ex['id_exp'] . '">
                             <button type="submit" class="remove-btn">
