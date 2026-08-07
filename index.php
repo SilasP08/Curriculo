@@ -28,11 +28,12 @@ require_once "./crud.php";
 
 
             <form action="./update.php" method="POST">
-                    <input type="hidden" name="id_dados" value="d">
-                    <button type="submit" class="edit-btn">
-                        <i class="fa-solid fa-pen"></i>
-                    </button>
-                </form>
+
+                <input type="hidden" name="dados" value="dado">
+                <button type="submit" class="edit-btn">
+                    <i class="fa-solid fa-pen"></i>
+                </button>
+            </form>
 
 
             <div class="profile-image">
@@ -44,7 +45,7 @@ require_once "./crud.php";
                 <h1><?= $dados['nome']; ?></h1>
 
                 <span><?= $dados['cargo']; ?></span>
-                
+
                 <p>Santo André • SP</p>
 
             </div>
@@ -54,11 +55,12 @@ require_once "./crud.php";
         <section class="about card">
 
             <form action="./update.php" method="POST">
-                    <input type="hidden" name="id_dados" value="d">
-                    <button type="submit" class="edit-btn">
-                        <i class="fa-solid fa-pen"></i>
-                    </button>
-                </form>
+
+                <input type="hidden" name="dados" value="dado">
+                <button type="submit" class="edit-btn">
+                    <i class="fa-solid fa-pen"></i>
+                </button>
+            </form>
 
             <h2>Sobre Mim</h2>
 
@@ -72,7 +74,7 @@ require_once "./crud.php";
 
             <div class="card">
                 <form action="./update.php" method="POST">
-                    <input type="hidden" name="id_dados" value="d">
+                    <input type="hidden" name="contato" value="conta">
                     <button type="submit" class="edit-btn">
                         <i class="fa-solid fa-pen"></i>
                     </button>
@@ -84,6 +86,8 @@ require_once "./crud.php";
 
             <div class="card">
                 <form action="./update.php" method="POST">
+
+                    <input type="hidden" name="contato" value="conta">
                     <button type="submit" class="edit-btn">
                         <i class="fa-solid fa-pen"></i>
                     </button>
@@ -114,7 +118,7 @@ require_once "./crud.php";
                             <div class="education-header">
                                 <h3>' . $formacoe['instituicao'] . '</h3>
                                 <form action="./update.php" method="POST">
-                                    <input type="hidden" name="id_formacao" value="' . $formacoe['id_formacao'] . '">
+                                    <input type="hidden" name="forma" value="formac">
                                     <button type="submit" class="edit-item">
                                         <i class="fa-solid fa-pen"></i>
                                     </button>
@@ -169,7 +173,7 @@ require_once "./crud.php";
                     <div class="experience-header">
                         <h3>' . $ex['empresa'] . '</h3>
                         <form action="./update.php" method="POST">
-                            <input type="hidden" name="id_exp" value="' . $ex['id_exp'] . '">
+                            <input type="hidden" name="exper" value="exp">
                             <button class="edit-item">
                                 <i class="fa-solid fa-pen"></i>
                             </button>
