@@ -23,6 +23,10 @@ body {
     color: var(--text);
 }
 
+main {
+    position: relative;
+}
+
 .profile {
     width: 90%;
     max-width: 1200px;
@@ -30,6 +34,7 @@ body {
 }
 
 .profile-card {
+    position: relative;
     width: 92%;
     margin: 90px auto 40px;
     background: var(--surface);
@@ -76,42 +81,8 @@ body {
     color: var(--text-light);
 }
 
-.profile-buttons {
-    display: flex;
-    gap: 15px;
-    margin-top: 25px;
-}
-
-.profile-buttons button {
-    padding: 12px 24px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: .95rem;
-    font-weight: 600;
-    transition: .3s;
-}
-
-.btn-primary {
-    border: none;
-    background: var(--primary);
-    color: white;
-}
-
-.btn-primary:hover {
-    background: var(--primary-dark);
-}
-
-.btn-secondary {
-    background: white;
-    color: var(--text);
-    border: 1px solid var(--border);
-}
-
-.btn-secondary:hover {
-    background: var(--surface-secondary);
-}
-
 .card {
+    position: relative;
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 18px;
@@ -138,17 +109,21 @@ body {
 }
 
 .education-item {
-    padding: 18px 0;
-    border-bottom: 1px solid var(--border);
-}
-
-.education-item:last-child {
-    border-bottom: none;
+    position: relative;
+    background: var(--surface-secondary);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 20px;
 }
 
 .education-item h3 {
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.education-item h4 {
     color: var(--title);
-    margin-bottom: 6px;
+    margin-bottom: 12px;
 }
 
 .education-item span {
@@ -156,52 +131,230 @@ body {
 }
 
 .experience-item {
-    position: relative;
-    padding-left: 30px;
-    margin-bottom: 35px;
-}
-
-.experience-item:last-child {
-    margin-bottom: 0;
-}
-
-.experience-item::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 5px;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: var(--primary);
-}
-
-.experience-item::after {
-    content: "";
-    position: absolute;
-    left: 5px;
-    top: 20px;
-    width: 2px;
-    height: calc(100% + 15px);
-    background: var(--border);
-}
-
-.experience-item:last-child::after {
-    display: none;
+    background: var(--surface-secondary);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 20px;
 }
 
 .experience-item h3 {
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.experience-item h4 {
     color: var(--title);
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .experience-item span {
-    color: var(--primary);
-    font-weight: 600;
+    color: var(--text-light);
+    display: block;
+    margin-bottom: 15px;
 }
 
 .experience-item p {
-    margin-top: 10px;
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.education-grid,
+.experience-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.education-item,
+.experience-item {
+    position: relative;
+    background: var(--surface-secondary);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 20px;
+    transition: .3s;
+}
+
+.edit-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: var(--surface-secondary);
+    color: var(--primary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+
+.edit-item {
+    position: absolute;
+    top: 15px;
+    right: 60px;
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 50%;
+    background: var(--surface);
+    color: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.add-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: var(--surface-secondary);
+    color: var(--primary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+
+.remove-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 50%;
+    background: var(--surface);
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.remove-btn:hover {
+    transform: scale(1.05);
+    transition: 0.2s ease;
+    color: white;
+    background-color: red;
+}
+
+.edit-item:hover {
+    transform: scale(1.05);
+    transition: 0.2s ease;
+    color: white;
+    background-color: var(--primary);
+}
+
+.add-btn:hover {
+    transform: scale(1.05);
+    transition: 0.2s ease;
+    color: white;
+    background-color: var(--primary);
+}
+
+.edit-btn:hover {
+    transform: scale(1.05);
+    transition: 0.2s ease;
+    color: white;
+    background-color: var(--primary);
+}
+
+.edit-btn,
+.edit-item,
+.add-btn,
+.remove-btn{
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(-5px);
+
+    transition: opacity .3s ease,
+                transform .3s ease,
+                visibility .3s ease;
+
+}
+
+.profile-card:hover .edit-btn,
+.about:hover .edit-btn,
+.card:hover .edit-btn,
+.education-grid:hover .add-btn,
+.experience-grid:hover .add-btn,
+.education-grid:hover .edit-btn{
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+
+}
+.education-item:hover .edit-item,
+.education-item:hover .remove-btn,
+.experience-item:hover .edit-item,
+.experience-item:hover .remove-btn{
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+
+}
+
+.education:hover .add-btn{
+
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+
+}
+
+.education-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+}
+
+.education-header h3 {
+    color: var(--primary);
+}
+
+.profile {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.education-body {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.info span {
+    font-size: .85rem;
     color: var(--text-light);
-    line-height: 1.7;
+}
+
+.info p {
+    margin-top: 3px;
+    font-weight: 600;
+    color: var(--title);
 }
