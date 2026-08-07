@@ -26,11 +26,14 @@ require_once "./crud.php";
         </form>
         <section class="profile-card">
 
-            <form action="./update.php" method="POST">
-                <button class="edit-btn">
-                    <i class="fa-solid fa-pen"></i>
-                </button>
-            </form>
+            
+                <form action="./update.php" method="POST">
+                    <input type="hidden" name="id_dados" value="<?= $dados['id']?>">
+                    <button type="submit" class="edit-btn">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+                </form>
+            
 
             <div class="profile-image">
                 <img src="img/user.png" alt="Foto">
@@ -49,11 +52,13 @@ require_once "./crud.php";
         </section>
 
         <section class="about card">
-            <form action="./update.php" method="POST">
-                <button class="edit-btn">
-                    <i class="fa-solid fa-pen"></i>
-                </button>
-            </form>
+            
+                <form action="./update.php" method="POST">
+                    <button type="submit" class="edit-btn">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+                </form>
+            
             <h2>Sobre Mim</h2>
 
             <p>
@@ -65,18 +70,22 @@ require_once "./crud.php";
         <section class="information">
 
             <div class="card">
-                <button class="edit-btn">
-                    <i class="fa-solid fa-pen"></i>
-                </button>
+                <form action="./update.php" method="POST">
+                    <button type="submit" class="edit-btn">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+                </form>
                 <h2>Conheça meus prejetos</h2>
                 <p><?= $contato["perfis"]; ?></p>
 
             </div>
 
             <div class="card">
-                <button class="edit-btn">
-                    <i class="fa-solid fa-pen"></i>
-                </button>
+                <form action="./update.php" method="POST">
+                    <button type="submit" class="edit-btn">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+                </form>
                 <h2>Contato</h2>
                 <p><?= $contato['email']; ?></p>
                 <p><?= $contato['telefone']; ?></p>
@@ -103,7 +112,7 @@ require_once "./crud.php";
                             <div class="education-header">
                                 <h3>' . $formacoe['instituicao'] . '</h3>
                                 <form action="./update.php" method="POST">
-                                    <button class="edit-item">
+                                    <button type="submit" class="edit-item">
                                         <i class="fa-solid fa-pen"></i>
                                     </button>
                                 </form>
