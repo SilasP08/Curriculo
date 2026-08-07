@@ -1,3 +1,35 @@
+<?php
+require_once './crud.php';
+
+$dados = $_POST['dados'] ?? '';
+if ($dados == 'd') {
+}
+$experiencia = $_POST['xp'] ?? '';
+if ($experiencia === 'xp') {
+    $add = [
+        'empresa'=> $_POST['empresa'],
+        'funcao'=> $_POST['cargo'],
+        'periodo'=> $_POST['periodo'],
+        'descricao'=> $_POST['desc']
+    ];
+
+    create($pdo, 'experiencias', $add);
+    header('Location: index.php');
+}
+
+$formacao = $_POST['f'] ??'';
+if ($formacao === 'for') {
+    $add = [
+        'instituicao'=> $_POST['instituicao'],
+        'curso'=> $_POST['curso'],
+        'periodo'=> $_POST['periodo']
+    ];
+
+    create($pdo, 'formacao', $add);
+    header('Location: index.php');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -10,7 +42,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
-<body>
+<body>  
 
     <main class="container">
         <section class="form-card">
